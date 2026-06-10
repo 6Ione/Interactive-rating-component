@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Overpass">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-color: hsl(216, 12%, 8%);
+      font-family: 'Overpass', serif;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* pushes down */
+    }
+    img{
+      background-color: hsl(217, 12%, 63%);
+      border-radius: 15px;
+    }
+    .card {
+      background-color: hsl(213, 19%, 18%);
+      border-radius: 15px;
+      width: 100%;
+      max-width: 350px;
+      padding: 40px;
+    }
+
+    .card-title h1 {
+      color: hsl(0, 100%, 100%);
+    }
+    .card-title p {
+      color: hsl(217, 12%, 63%);
+      line-height: 1.8em;
+    }
+
+    .card-rating button {
+      width: 100%;
+      padding: 16px;
+      background-color: hsl(25, 97%, 53%);
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card-container">
+      <div class="card">
+        <div class="star-icon">
+          <img src="images/icon-star.svg" alt="star-icon">
+        </div>
+
+        <div class="card-title">
+          <h1> How did we do?</h1>
+          <p>Please let us know how we did with your support request. All feedback 
+            is appreciated to help us improve our offering!</p>
+        </div>
+
+        <div class="card-rating">
+
+          <button type="submit">S U B M I T</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- Rating state start -->
+
+  How did we do?
+
+  Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!
+
+  1 2 3 4 5
+
+  Submit
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  You selected <!-- Add rating here --> out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  <!-- Thank you state end -->
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
