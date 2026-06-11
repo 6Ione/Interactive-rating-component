@@ -24,13 +24,21 @@
       align-items: center;
       min-height: 100vh; /* pushes down */
     }
-    img{
-      background-color: hsl(217, 12%, 63%);
-      border-radius: 15px;
+
+    .star-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: hsl(213, 19%, 24%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
     }
+
     .card {
       background-color: hsl(213, 19%, 18%);
-      border-radius: 15px;
+      border-radius: 20px;
       width: 100%;
       max-width: 350px;
       padding: 40px;
@@ -39,9 +47,42 @@
     .card-title h1 {
       color: hsl(0, 100%, 100%);
     }
+
     .card-title p {
       color: hsl(217, 12%, 63%);
       line-height: 1.8em;
+    }
+
+    .card-rating {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .ratings {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+    }
+
+    .ratings span {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: hsl(213, 19%, 24%);
+      color: hsl(217, 12%, 63%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ratings span:hover {
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+      transform: none;
     }
 
     .card-rating button {
@@ -53,6 +94,13 @@
       font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
+    }
+    .card-rating button:hover {
+      transform: scale(1.1);
+    }
+    .rating-btn.selected {
+      background-color: hsl(217, 12%, 63%);
+      color: white;
     }
   </style>
 </head>
@@ -71,8 +119,14 @@
         </div>
 
         <div class="card-rating">
-
-          <button type="submit">S U B M I T</button>
+          <div data-productid="10" class="ratings">
+            <span class="rating-btn" data-rating="1">1</span>
+            <span class="rating-btn" data-rating="2">2</span>
+            <span class="rating-btn" data-rating="3">3</span>
+            <span class="rating-btn" data-rating="4">4</span>
+            <span class="rating-btn" data-rating="5">5</span>
+          </div>
+          <button id="submit-btn" type="submit">S U B M I T</button>
         </div>
 
       </div>
@@ -107,5 +161,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
